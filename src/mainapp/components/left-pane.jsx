@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "../../App.css";
 import logo from './../../assets/logo.png';  
 
+
 export const LeftPane = ({handleClick}) =>{
 
     const [items] = useState([
@@ -85,10 +86,11 @@ export const LeftPane = ({handleClick}) =>{
 
 
     <div className="contactus">
-  <a href="/BusinessCard.html" target="_blank">
+  <a href="/rubik-s-cube-simulator-main/BusinessCard.html" target="_blank">
     <button className="Contact">Contact Us</button>
   </a>
 </div>
+
 
     </div>
   );

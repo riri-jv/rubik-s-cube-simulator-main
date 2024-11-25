@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import "../../App.css"
+import "../../App.css";
+import logo from './../../assets/logo.png';  
 
 export const LeftPane = ({handleClick}) =>{
 
@@ -55,7 +56,7 @@ export const LeftPane = ({handleClick}) =>{
       <div className="logonname">
       <a href="../src/mainapp/Home Page/homepage.html">
         <span className="img">
-            <img src="../src/assets/logo.png" alt="Logo"></img>
+            <img src={logo} alt="Logo"></img>
         </span>
         <span className="RCS">
           RCS

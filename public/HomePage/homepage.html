@@ -7,36 +7,26 @@
   <link rel="icon" type="image/svg+xml" href="/rubik-s-cube-simulator-main/assets/logo.png"/>
   <title>RCS - Home</title>
   <link rel="stylesheet" href="homepage.css">
-
-
-
 </head>
 <body>
-  <main>
-    <header>Rubik's Cube Simulator</header>
-    <div>
-    <p class="p1">
-      As the name says, this is a Simulator for a classic 3X3 Rubik's cube.
-      A cube has 6 faces; each of different colour(white, yellow, red, blue, orange, green).
-      Each individual unit of a cube is called cubie. There are 27 cubies in total and are also called pieces. 
-      There are 8 corner pieces, 12 middles pieces, and 6 center pieces. 
-      The center pieces do not move and are costant with respect to each other. 
-      With every move made, 8 cubies change their positions. Turing the cube in specific ways creates a pattern. 
-      This Simulator will make it possible to try out these fun patterns. 
-    </p>
-
-
-    <p class="p2">
-      The left pane has a list of Patterns, which on clicking will show you the steps to follow for making a pattern. 
-      Choose the pattern you want to try out and get started. 
-      Follow the steps as mentioned on the right side, and see your pattern coming to life. 
-      Press the key as mentioned and the cube will make move. 
-      The keys are coded as per the original moves. The 'r' for "R" move, and 'R' for "R'" move.
-
-    </p>
-  </div>
-
-    <a href="/rubik-s-cube-simulator-main/index.html"> Try it Out!</a>
+  <main class="container">
+    <section class="content">
+      <header class="header">Rubik's Cube Simulator</header>
+      <p class="p1">
+        As the name says, this is a simulator for a classic 3x3 Rubik's Cube.
+        A cube has 6 faces, each of a different color (white, yellow, red, blue, orange, green).
+        Each individual unit of a cube is called a cubie. There are 27 cubies in total, also called pieces. 
+        There are 8 corner pieces, 12 edge pieces, and 6 center pieces. The center pieces do not move.
+      </p>
+      <p class="p2">
+        Choose a pattern from the left pane, follow the steps on the right, and see your pattern come to life! 
+        Press the keys as mentioned, and the simulator will reflect the move.
+      </p>
+      <a href="/rubik-s-cube-simulator-main/index.html" class="button">Try it Out!</a>
+    </section>
+    <section class="image-container">
+      <img src="./../assets/cube.jpg" alt="Rubik's Cube Image">
+    </section>
   </main>
 </body>
 </html>

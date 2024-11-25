@@ -1,56 +1,67 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
-  background-image: url("./../assets/wallpaper.webp");
-  position: absolute;
+  background-color: #f5f5f5; /* White background */
+  font-family: 'Arial', sans-serif;
 }
 
-
-
-main{
-  /*background-color: #e3baba;*/
-  background: linear-gradient(to right bottom,#8e8e8e, #5b5b5b6b );
-  height: 90%;
-  width: 60%;
-  /*3.5" X 2.0"*/
+.container {
+  display: flex;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.95));
   border-radius: 30px;
-  text-align: center;
-  box-shadow:  0 0 2000px rgba(220, 220, 220, 0.228);
-  padding: 1%;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 70%;
+  height: 80%;
 }
 
-header{
-  font-size: 30px;
+.content {
+  flex: 1;
+  padding: 40px;
+  text-align: left;
 }
 
-.p1{
-  margin-top: 3%;
-  margin-left: 8%;
-  margin-right: 8%;
+.header {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.p1, .p2 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Button color */
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
   font-size: 20px;
-  text-align: center;
 }
 
-.p2{
-  margin-top: 3%;
-  margin-left: 8%;
-  margin-right: 8%;
-  font-size: 20px;
-  text-align: center;
-  padding-bottom: 15%;
+.image-container {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-a, a:hover{
- color: black;
- font-size: 25px;
+.image-container img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px;
 }

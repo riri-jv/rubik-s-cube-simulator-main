@@ -84,12 +84,11 @@ export const LeftPane = ({handleClick}) =>{
 
 
 
-      <div className="contactus">
-      <a href="../src/mainapp/BusinessCard/BusinessCard.html" target="_blank">
-        <button className="Contact">Contact Us</button>
-      </a>
-    </div>
-
+    <div className="contactus">
+  <a href="/BusinessCard.html" target="_blank">
+    <button className="Contact">Contact Us</button>
+  </a>
+</div>
     </div>
   );
 };

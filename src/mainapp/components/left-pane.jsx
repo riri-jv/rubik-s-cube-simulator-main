@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "../../App.css";
-import logo from './../../assets/logo.png';  
+import logo from './../../../public/assets/logo.png';
 
 
 export const LeftPane = ({handleClick}) =>{

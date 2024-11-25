@@ -3196,43 +3196,43 @@ void main() {
 			);
     }
   `,Bw=()=>`
-	uniform float opacity;
+    uniform float opacity;
 
     varying vec3 pos;
 
     void main() {
-		vec4 red = vec4(1.0, 0.0, 0.0, opacity);
-		vec4 white = vec4(1.0, 1.0, 1.0, opacity);
-		vec4 blue = vec4(0.0, 0.0, 1.0, opacity);
-		vec4 yellow = vec4(1.0, 1.0, 0.0, opacity);
-		vec4 green = vec4(0.0, 1.0, 0.0, opacity);
-		vec4 orange = vec4(1.0, 0.65, 0.0, opacity);
+        vec4 red = vec4(1.0, 0.6, 0.6, opacity);      // Pastel Red
+        vec4 white = vec4(1.0, 1.0, 1.0, opacity);    // White remains the same
+        vec4 blue = vec4(0.6, 0.7, 1.0, opacity);     // Pastel Blue
+        vec4 yellow = vec4(1.0, 1.0, 0.8, opacity);   // Pastel Yellow
+        vec4 green = vec4(0.7, 1.0, 0.7, opacity);    // Pastel Green
+        vec4 orange = vec4(1.0, 0.8, 0.6, opacity);   // Pastel Orange
 
-		vec4 black = vec4(0.0, 0.0, 0.0, opacity);
+        vec4 black = vec4(0.2, 0.2, 0.2, opacity);    // Softened Black
 
-		float scale = 0.499;
+        float scale = 0.499;
 
-		bool front = pos.z > scale;
-		bool back = pos.z < -1.0 * scale;
-		bool top = pos.y > scale;
-		bool bottom = pos.y < -1.0 * scale;
-		bool right = pos.x > scale;
-		bool left = pos.x < -1.0 * scale;
+        bool front = pos.z > scale;
+        bool back = pos.z < -1.0 * scale;
+        bool top = pos.y > scale;
+        bool bottom = pos.y < -1.0 * scale;
+        bool right = pos.x > scale;
+        bool left = pos.x < -1.0 * scale;
 
-		if (front) {
-    		gl_FragColor = red;
-		} else if (back) {
-    		gl_FragColor = orange;
-		} else if (top) {
-			gl_FragColor = white;
-		} else if (bottom) {
-			gl_FragColor = yellow;
-		} else if (right) {
-			gl_FragColor = blue;
-	 	} else if (left) {
-			gl_FragColor = green;
-		} else {
-			gl_FragColor = black;
-		}
+        if (front) {
+            gl_FragColor = red;
+        } else if (back) {
+            gl_FragColor = orange;
+        } else if (top) {
+            gl_FragColor = white;
+        } else if (bottom) {
+            gl_FragColor = yellow;
+        } else if (right) {
+            gl_FragColor = blue;
+        } else if (left) {
+            gl_FragColor = green;
+        } else {
+            gl_FragColor = black;
+        }
     }
   `;class Gw{constructor(e,n,i){this.cubeGroup=new qr;const r=new _s(1,1,1),s=new Ri({vertexShader:Ow(),fragmentShader:Bw()});this.cubeMesh=new Jn(r,s);const o=new Rw(this.cubeMesh.geometry),a=new Yg({color:"#000"});this.lineMesh=new Dw(o,a),this.cubeGroup.add(this.cubeMesh),this.cubeGroup.add(this.lineMesh),this.cubeGroup.position.x=e,this.cubeGroup.position.y=n,this.cubeGroup.position.z=i}}class Vw{constructor(){this.scale=20,this.epsilon=.5,this.selectedCube=null,this.rubiksCubeGroup=new qr,this.rubiksCubeGroup.scale.set(this.scale,this.scale,this.scale),this.rubiksCubeGroup.rotation.set(Math.PI/7,-Math.PI/4,0),this.initializeRubiksCube();const e=n=>{Uw(n),requestAnimationFrame(e)};e(),window.addEventListener("keydown",n=>this.onKeyDown(n))}initializeRubiksCube(){this.cubes=[];let e=0;for(let n=-1;n<=1;n++)for(let i=-1;i<=1;i++)for(let r=-1;r<=1;r++)this.cubes[e]=new Gw(n,i,r),this.rubiksCubeGroup.add(this.cubes[e].cubeGroup),e++;this.selectedCube=this.cubes[0]}rotateAroundWorldAxis(e,n){if(e.isRotating)return;const i={rotation:0},r={rotation:0},s={rotation:Math.PI/2};e.isRotating=!0,new zw(i).to(s,300).easing(Js.Quadratic.InOut).onUpdate(({rotation:a})=>{e.position.applyAxisAngle(n,a-r.rotation),e.rotateOnWorldAxis(n,a-r.rotation),r.rotation=a}).onComplete(()=>{e.isRotating=!1,e.rotation.set(Math.round(e.rotation.x/(Math.PI/2))*(Math.PI/2),Math.round(e.rotation.y/(Math.PI/2))*(Math.PI/2),Math.round(e.rotation.z/(Math.PI/2))*(Math.PI/2))}).start()}cubeInSameAxis(e,n,i){return Math.abs(e.cubeGroup.position[i]-n.cubeGroup.position[i])<this.epsilon}onKeyDown(e){const i={L:{axis:new I(-1,0,0),check:"x",slice:-1},l:{axis:new I(1,0,0),check:"x",slice:-1},R:{axis:new I(1,0,0),check:"x",slice:1},r:{axis:new I(-1,0,0),check:"x",slice:1},U:{axis:new I(0,1,0),check:"y",slice:1},u:{axis:new I(0,-1,0),check:"y",slice:1},D:{axis:new I(0,-1,0),check:"y",slice:-1},d:{axis:new I(0,1,0),check:"y",slice:-1},F:{axis:new I(0,0,1),check:"z",slice:1},f:{axis:new I(0,0,-1),check:"z",slice:1},B:{axis:new I(0,0,-1),check:"z",slice:-1},b:{axis:new I(0,0,1),check:"z",slice:-1}}[e.key];i&&this.cubes.forEach(r=>{Math.abs(r.cubeGroup.position[i.check]-i.slice)<this.epsilon&&this.rotateAroundWorldAxis(r.cubeGroup,i.axis)})}}const Hw=()=>(ps.useEffect(()=>{const t=new Nw("myThreeJsCanvas");t.initScene(),t.animate();const e=new Vw;t.scene.add(e.rubiksCubeGroup);const n=i=>{i.repeat||e.onKeyDown(i)};window.addEventListener("keydown",n)}),Ve("div",{children:Ve("canvas",{id:"myThreeJsCanvas"})})),Ww=()=>Ve("div",{className:"middle-pane",id:" middle-pane",children:Ve(Hw,{})}),jw=()=>{const[t,e]=ps.useState({});return Hs("main",{children:[Ve(Pv,{handleClick:i=>{e(i)}}),Ve(Ww,{}),Ve(Dv,{currentItem:t})]})};function Xw(){return Ve("div",{children:Ve(jw,{})})}Ru.createRoot(document.getElementById("root")).render(Ve(_0.StrictMode,{children:Ve(Xw,{})}));

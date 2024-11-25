@@ -1,0 +1,203 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Root Container */
+#root {
+  background-color: #888;
+  height: 100vh; /* Ensure full viewport coverage */
+}
+
+/* Main Layout */
+main {
+  display: flex;
+  justify-content: space-between; /* Ensures equal distribution */
+  align-items: stretch; /* Match heights */
+  min-height: 100vh; /* Stretch to full viewport */
+  background-color: #000;
+}
+
+/* Left Pane */
+.left-pane,
+.right-pane {
+  background: linear-gradient(#898989, #222222);
+  border-radius: 30px;
+  width: 20%;
+  margin: 1%;
+  display: flex;
+  flex-direction: column; /* Ensures content fits well */
+  overflow: auto; /* Prevents content overflow */
+}
+
+/* Right Pane Gradient Adjust */
+.right-pane {
+  background: linear-gradient(#898989, #ababab);
+}
+
+/* Middle Pane */
+.middle-pane {
+  background-color: #000;
+  flex: 1; /* Takes up remaining space */
+  margin: 1% 0; /* Maintain spacing */
+}
+
+
+.Contact {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  margin-top:  3%;
+  margin-left: 8%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+  cursor: pointer;
+}
+
+.Contact:hover{
+  font-weight: bolder;
+}
+
+.patterns {
+
+  font-size: 20px;
+  margin-top: 5%;
+  margin-left: 8%;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  max-height: fit-content;
+}
+
+
+
+.ul {
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  margin-bottom: 2%;
+  margin-left: 10%;
+
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+}
+
+li{
+  margin-top: 5%;
+  list-style-type: none;
+  margin-left: 0%;
+  margin-right: 0px;
+  
+}
+
+li:hover{
+  font-weight: bolder;
+}
+
+/*Pattern-list - a tag*/
+.patternslist{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+
+.patternslist:visited {
+  text-decoration: none;
+}
+
+.patternslist:hover {
+  text-decoration: none;
+  cursor:  pointer;
+}
+
+.patternslist:active {
+  text-decoration: none;
+}
+
+
+/*for the logo n name*/
+
+a, a:hover{
+  text-decoration: none;
+} 
+
+a {
+  display: flex;  
+  background-color: none;
+  color: black;
+}
+
+.RCS {
+  align-self: center;
+  margin-left: 15px;
+  font-size: 30px;
+  color: black;
+  
+  margin-top: 10%;
+}
+
+
+.img {
+  display: flex;
+  background-color: none;
+  align-content: center;
+}
+.img img {
+  width: 50px;
+  height: 50px;
+  margin-top: 15%;
+}
+
+
+
+
+
+.logonname {
+  background-color: none;
+  margin-left: 5%;
+  display: flex;
+  align-content: center;
+}
+
+.patternheading{
+  margin-left: 10%;
+  margin-top: 10%;
+  min-height: fit-content;
+  font-size: 25px;
+  color: azure;
+  width: 90%;
+}
+
+.patterndesc{
+ background-color: aqua;
+ height: 100px;
+ width: 88%;
+ margin-left: 12%;
+ margin-top: 2%;
+ height: 600px;
+ font-size: 20px;
+ color: #000000;
+
+}
+
+.PatternTitile{
+  margin-left: 5%;
+  margin-top: 5%;
+  height: 50px;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  width: 90%;
+}
+
+.inst{
+  margin-left: 10%;
+  height: 500px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  width: 85%;
+
+}
+
+
+.inst li:hover{
+  font-weight: normal;
+}

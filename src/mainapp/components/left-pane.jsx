@@ -55,7 +55,7 @@ export const LeftPane = ({handleClick}) =>{
   return(
     <div className="left-pane">
       <div className="logonname">
-      <a href="../src/mainapp/Home Page/homepage.html">
+      <a href="/rubik-s-cube-simulator-main/HomePage/homepage.html">
         <span className="img">
             <img src={logo} alt="Logo"></img>
         </span>

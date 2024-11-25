@@ -89,6 +89,7 @@ export const LeftPane = ({handleClick}) =>{
     <button className="Contact">Contact Us</button>
   </a>
 </div>
+
     </div>
   );
 };

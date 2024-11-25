@@ -85,7 +85,7 @@ export const LeftPane = ({handleClick}) =>{
 
 
     <div className="contactus">
-  <a href="/rubik-s-cube-simulator-main/BusinessCard.html" target="_blank">
+  <a href="/rubik-s-cube-simulator-main/BusinessCard.html">
     <button className="Contact">Contact Us</button>
   </a>
 </div>

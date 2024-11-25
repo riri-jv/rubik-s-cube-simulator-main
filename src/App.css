@@ -41,11 +41,9 @@ main {
 
 /* Middle Pane */
 .middle-pane {
-  background-color: #ffffff;
+  background-color: #000;
   flex: 1; /* Takes up remaining space */
   margin: 1% 0; /* Maintain spacing */
-  border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Button */

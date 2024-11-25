@@ -6,7 +6,7 @@
 
 /* Root Container */
 #root {
-  background-color: #888;
+  background-color: #f0f0f5;
   height: 100vh; /* Ensure full viewport coverage */
 }
 
@@ -16,59 +16,67 @@ main {
   justify-content: space-between; /* Ensures equal distribution */
   align-items: stretch; /* Match heights */
   min-height: 100vh; /* Stretch to full viewport */
-  background-color: #000;
+  background-color: #f4f4f9;
 }
 
 /* Left Pane */
 .left-pane,
 .right-pane {
-  background: linear-gradient(#898989, #222222);
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
   border-radius: 30px;
   width: 20%;
   margin: 1%;
   display: flex;
   flex-direction: column; /* Ensures content fits well */
   overflow: auto; /* Prevents content overflow */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Right Pane Gradient Adjust */
 .right-pane {
-  background: linear-gradient(#898989, #ababab);
+  background: rgba(255, 255, 255, 0.2); /* Softer glass effect */
+  backdrop-filter: blur(5px);
 }
 
 /* Middle Pane */
 .middle-pane {
-  background-color: #000;
+  background-color: #ffffff;
   flex: 1; /* Takes up remaining space */
   margin: 1% 0; /* Maintain spacing */
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Contact Button */
 .Contact {
   border: none;
-  background-color: transparent;
+  background-color: #4f84f1;
   font-size: 20px;
-  margin-top:  3%;
+  margin-top: 3%;
   margin-left: 8%;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   cursor: pointer;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  transition: background-color 0.3s ease;
 }
 
-.Contact:hover{
+.Contact:hover {
   font-weight: bolder;
+  background-color: #3b70c7;
 }
 
+/* Text Styles */
 .patterns {
-
   font-size: 20px;
   margin-top: 5%;
   margin-left: 8%;
-
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #333;
   max-height: fit-content;
 }
-
-
 
 .ul {
   border: none;
@@ -76,29 +84,26 @@ main {
   font-size: 15px;
   margin-bottom: 2%;
   margin-left: 10%;
-
-
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+  color: #444;
 }
 
-li{
+li {
   margin-top: 5%;
   list-style-type: none;
   margin-left: 0%;
   margin-right: 0px;
-  
 }
 
-li:hover{
+li:hover {
   font-weight: bolder;
+  color: #4f84f1;
 }
 
-/*Pattern-list - a tag*/
-.patternslist{
+/* Pattern-list - a tag */
+.patternslist {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
-
 
 .patternslist:visited {
   text-decoration: none;
@@ -106,22 +111,22 @@ li:hover{
 
 .patternslist:hover {
   text-decoration: none;
-  cursor:  pointer;
+  cursor: pointer;
+  color: #4f84f1;
 }
 
 .patternslist:active {
   text-decoration: none;
 }
 
-
-/*for the logo n name*/
-
-a, a:hover{
+/* Logo and Name Styles */
+a,
+a:hover {
   text-decoration: none;
-} 
+}
 
 a {
-  display: flex;  
+  display: flex;
   background-color: none;
   color: black;
 }
@@ -130,27 +135,23 @@ a {
   align-self: center;
   margin-left: 15px;
   font-size: 30px;
-  color: black;
-  
+  color: #333;
   margin-top: 10%;
 }
-
 
 .img {
   display: flex;
   background-color: none;
   align-content: center;
 }
+
 .img img {
   width: 50px;
   height: 50px;
   margin-top: 15%;
 }
 
-
-
-
-
+/* Logo & Name Container */
 .logonname {
   background-color: none;
   margin-left: 5%;
@@ -158,46 +159,50 @@ a {
   align-content: center;
 }
 
-.patternheading{
+/* Pattern Heading */
+.patternheading {
   margin-left: 10%;
   margin-top: 10%;
   min-height: fit-content;
   font-size: 25px;
-  color: azure;
+  color: #4f84f1;
   width: 90%;
 }
 
-.patterndesc{
- background-color: aqua;
- height: 100px;
- width: 88%;
- margin-left: 12%;
- margin-top: 2%;
- height: 600px;
- font-size: 20px;
- color: #000000;
-
+/* Pattern Description */
+.patterndesc {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 600px;
+  width: 88%;
+  margin-left: 12%;
+  margin-top: 2%;
+  font-size: 20px;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-.PatternTitile{
+/* Pattern Title */
+.PatternTitile {
   margin-left: 5%;
   margin-top: 5%;
   height: 50px;
   font-size: 25px;
-  color: rgb(0, 0, 0);
+  color: #333;
   width: 90%;
 }
 
-.inst{
+/* Instructions */
+.inst {
   margin-left: 10%;
   height: 500px;
   font-size: 15px;
-  color: rgb(0, 0, 0);
+  color: #333;
   width: 85%;
-
 }
 
-
-.inst li:hover{
+.inst li:hover {
   font-weight: normal;
+  color: #4f84f1;
 }

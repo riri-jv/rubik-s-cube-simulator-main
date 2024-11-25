@@ -1,122 +1,105 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  width: 100vw;
-
-  background-image: url('./../assets/wallpaper.webp');
-
-  position: absolute;
-
+  background-color: #f0f4f8; /* Soft white background */
+  font-family: 'Poppins', sans-serif;
 }
 
-
-main{
-  /*background-color: #e3baba;*/
-  background-color: rgba(255, 255, 255, 0.459);
-  height: 400px;
-  width: 700px;
-  /*3.5" X 2.0"*/
-  border-radius: 30px;
-  box-shadow:  0 0 2000px rgba(220, 220, 220, 0.228);
+main {
+  background-color: #ffffff; /* Pure white card */
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Soft shadow */
   display: flex;
-  align-items: center;
+  overflow: hidden;
+  width: 700px;
+  height: 400px;
+  transition: transform 0.3s ease;
+}
+
+main:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.leftdiv {
+  padding: 40px 30px;
+  background-color: #1f1f1f; /* Dark left panel */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  width: 45%;
 }
 
-.leftdiv{
-  margin-left: 5%;
-  min-width: 45%;
-  background-color: #1f1f1f;
-  height: 100%;
-  padding-left: 3%;
-  padding-top: 10%;
+.leftdiv p {
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
-.leftdiv p{
-  font-size: 22px;
-  color: azure;
-  font-family:monospace
+.details {
+  margin-top: 20px;
 }
 
-.details{
-  margin-top: 8%;
-}
-.details p{
-  font-size: 15px;
-  margin-left: 10%;
-  font-family: Arial, Helvetica, sans-serif;
+.details p {
+  font-size: 16px;
+  margin: 5px 0;
 }
 
-.address{
-  margin-top: 3%;
-font-size: 15%;
-padding-bottom: 10%;
+.address {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-.mail{
-  font-size: 22px;
-  color: azure;
-  font-family:monospace
-}
-
-
-.rightdiv{
-  min-width: 50%;
-  /*background-color: rgb(255, 255, 255);*/
-  height: 100%;
-}
-
-.rightdiv a, a:hover{
+.mail {
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 18px;
+  color: #4CAF50;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
-.upper{
-  height: 50%;
-  /*background-color: blue;*/
+.mail:hover {
+  color: #45a049; /* Slightly brighter on hover */
 }
 
-
-.RCS {
-  font-size: 30px;
-  color: black;
-  margin-top: 0%;
-  font-weight: normal;
+.rightdiv {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Soft gray background */
+  position: relative;
 }
 
-.lower{
-  text-align: center;
-}
-
-
-a{
+.rightdiv a {
   text-decoration: none;
-  background-color: none;
-  color: black;
-}
-
-a:hover{
- font-weight: bolder; 
- text-decoration: none;
-
-}
-
-
-.img {
-  background-color: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .img img {
-  width: 50px;
-  height: 50px;
-  margin-top: 43%;
-  margin-left: 43%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
 }
 
+.img img:hover {
+  transform: rotate(10deg) scale(1.1); /* Rotate and zoom effect */
+}
+
+.RCS {
+  font-size: 36px;
+  color: #333;
+  font-weight: bold;
+}
